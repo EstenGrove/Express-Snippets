@@ -20,7 +20,7 @@ app.get('/', () => {
 app.listen(PORT, () => console.log(`App is listening on port ${PORT}...`))
 ```
 5. Install "nodemon", which is like hot reloading: ```npm i -D nodemon```
-  a. Change the "scripts" section to include: 
+      a. Change the "scripts" section to include: 
   ```javascript
   "scripts": {
     "start": "nodemon index.js"
