@@ -3,10 +3,10 @@ A set of Node and Express snippets, helpers, tools and middleware.
 
 
 ## Create an Express App
-1. Create a ```package.json``` file by running: ```npm init```
-2. Install Express: ```npm i express```
-3. Create an index.js file for the app: ```touch index.js```
-4. Paste the following code into the index.js:
+__1.__ Create a ```package.json``` file by running: ```npm init```
+__2.__ Install Express: ```npm i express```
+__3.__ Create an index.js file for the app: ```touch index.js```
+__4.__ Paste the following code into the index.js:
 ```javascript
 const express = require('express');
 const app = express();
@@ -19,11 +19,11 @@ app.get('/', () => {
 
 app.listen(PORT, () => console.log(`App is listening on port ${PORT}...`))
 ```
-5. Install "nodemon", which is like hot reloading: ```npm i -D nodemon```
-6. Change the "scripts" section to include: 
+__5.__ Install "nodemon", which is like hot reloading: ```npm i -D nodemon```
+__6.__ Change the "scripts" section to include: 
   ```javascript
   "scripts": {
     "start": "nodemon index.js"
   }
   ```
-7. Then start the server: ```npm start```
+__7.__ Then start the server: ```npm start```
