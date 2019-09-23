@@ -4,7 +4,9 @@ A set of Node and Express snippets, helpers, tools and middleware.
 
 ## Create an Express App
 __1.)__ Create a ```package.json``` file by running: ```npm init```
+
 __2.)__ Install Express: ```npm i express```
+
 __3.)__ Create an index.js file for the app: ```touch index.js```
 __4.)__ Paste the following code into the index.js:
 ```javascript
