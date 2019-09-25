@@ -4,6 +4,7 @@ A set of Node and Express snippets, helpers, tools and middleware.
 
 ## Create an Express App
 [Here's a great resource for setup up w/ a database](https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/)
+
 __1.)__ Create a ```package.json``` file by running: ```npm init```
 
 __2.)__ Install Express: ```npm i express```
