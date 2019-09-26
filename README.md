@@ -2,6 +2,12 @@
 A set of Node and Express snippets, helpers, tools and middleware.
 
 
+## Quick Access
+- [Create Express App](#create-an-express-app)
+- [Middleware](#tools-and-middleware)
+------------------------
+
+
 ## Create an Express App
 [Here's a great resource for setup up w/ a database](https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/)
 
@@ -78,6 +84,9 @@ const pool = new Pool({
 })
 ```
 
+
+#### ```PING``` and ```NET-PING```
+Both packages are great for handling ping requests to a host. However, ```net-ping``` will immediately close the request connection after an attempt if so desired which allows for less time required between additional requests and retries.
 
 
 
