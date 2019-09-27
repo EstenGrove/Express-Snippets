@@ -72,7 +72,8 @@ const morgan = require("morgan");
 - Create a folder for the DB controllers (ie. DB queries): ```mkdir controllers```
 
 #### Add DB Queries
-- "GET" request
+
+###### "GET" request
 ```javascript
 const getData = (req, res, db) => {
   db.select("*")
@@ -87,7 +88,7 @@ const getData = (req, res, db) => {
     .catch(err => res.status(400).json({ dbError: "db error occured" }));
 }
 ```
-- "POST" request
+###### **"POST" request**
 ```javascript
 const postData = (req, res, db) => {
   const { username, password, email } = req.body;  // values to save to db
@@ -102,7 +103,7 @@ const postData = (req, res, db) => {
     .catch(err => res.status(400).json({ dbError: "db error occured" }))
 }
 ```
-- "PUT" request
+###### **"PUT" request**
 ```javascript
 const putTableData = (req, res, db) => {
   const { id, first, last, email, phone, location, hobby } = req.body;  // values to update
@@ -116,7 +117,7 @@ const putTableData = (req, res, db) => {
     .catch(err => res.status(400).json({ dbError: "db error" }));
 };
 ```
-- "DELETE" request
+###### **"DELETE" request**
 ```javascript
 const deleteTableData = (req, res, db) => {
   const { id } = req.body;  // value used to find item to delete
