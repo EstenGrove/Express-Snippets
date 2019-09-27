@@ -4,7 +4,10 @@
 - [Setup Postgres Database](#setup-postgres-database)
 - [Setup Express packages](#setup-express-packages)
 - [Add DB Queries in Express](#add-db-queries)
-- 
+  - ["GET"](#get-request)
+  - ["POST"](#post-request)
+  - ["PUT"](#put-request)
+  - ["DELETE"](#delete-request)
 
 #### Helpful Packages for Working with Postgres
 - "pg": ```npm i pg```
