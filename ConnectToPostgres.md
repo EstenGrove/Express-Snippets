@@ -1,6 +1,10 @@
 # Working with Postgres
 
 ## Quick Access
+- [Setup Postgres Database](#setup-postgres-database)
+- [Setup Express packages](#setup-express-packages)
+- [Add DB Queries in Express](#add-db-queries)
+- 
 
 #### Helpful Packages for Working with Postgres
 - "pg": ```npm i pg```
@@ -8,7 +12,7 @@
 
 ------------
 
-# Setup Postgres & Express Connection
+# Steps: Setup Postgres & Express Connection
 **Steps**
 
 __1.)__ Install packages: ```npm i pg knex```
@@ -52,7 +56,7 @@ INSERT INTO <table_name> (<col_1>, <col_2>...) VALUES (
 SELECT * FROM <table_name>;
 ```
 
-## Setup Express & DB Connection
+## Setup Express Packages
 ```javascript
 // index.js (main express file)
 const express = require('express');
