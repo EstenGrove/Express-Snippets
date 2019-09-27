@@ -10,6 +10,7 @@
 
 # Setup Postgres & Express Connection
 **Steps**
+
 __1.)__ Install packages: ```npm i pg knex```
 
 __2.)__ Setup Postgres database
