@@ -52,3 +52,11 @@ app.get('/', (req, res) => {
 })
 
 ```
+
+---------------
+
+## Content Types on the ```request``` Object
+There a set of content types that a request can send data as.
+- ```Content-Type: application/json``` requires the ```express.json()``` middleware
+- ```Content-Type: application/www-form-urlencoded``` requires the ```express.urlencoded()``` middleware
+  - This type is often used with forms
