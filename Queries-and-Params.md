@@ -5,6 +5,8 @@ Working w/ queries and params of the request object in Express/Node.
 The ```request``` object that's accessible within an express HTTP method function (ie ```app.get()```, ```app.put()``` etc).
 
 ### Properties Available on the ```REQUEST``` Object
+All properties are available on the request object: ```req.baseURL```, ```req.cookies``` etc.
+
 - ```baseURL``` - the base url of the http request
 - ```body``` - data submitted in the request body
 - ```cookies``` - cookies sent with the request (use the ```cookie-parser``` middleware)
@@ -18,7 +20,7 @@ The ```request``` object that's accessible within an express HTTP method functio
 - ```signedCookies``` - contains the signed cookie (use the ```cookie-parser``` middleware).
 
 
-## Query Strings
+### Query Strings
 The ```query``` property on the ```request``` object is accessible directly from the property itself:
 ```javascript
 // Example request: http://localhost:3000/?name=Esten&age=32
