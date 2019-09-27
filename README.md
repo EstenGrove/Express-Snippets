@@ -10,6 +10,7 @@ A set of Node and Express snippets, helpers, tools and middleware.
   - [cookie-parser](#cookie-parser)
   - [pg: Postgres connection](#pg)
   - [morgan: http logger](#morgan)
+  - [express-sessions: user sessions](#express-sessions)
   - [ping: a ping TCP wrapper](#ping)
 ------------------------
 
@@ -77,6 +78,7 @@ app.use(
 
 #### ```cookie-parser```
 "cookie-parser" is a package that handles parsing cookie headers and will populate the ```req.cookies``` property of the request object.
+- Install: ```npm i cookie-parser```
 
 **Example**
 ```javascript
@@ -119,6 +121,7 @@ const pool = new Pool({
 
 #### ```morgan```
 "morgan" is an HTTP request logging package.
+- Install: ```npm i morgan```
 
 **Example**
 ```javascript
@@ -131,9 +134,26 @@ app.use(morgan('combined'));
 morgan(format, options)
 ```
 
+#### ```express-session```
+"express-session" handles user sessions 
+- Install: ```npm i express-session```
+
+**Example**
+```javascript
+const session = require('express-session'):
+
+app.use(session(
+  'secret': '343kd833ls8lslk3x'
+))
+
+// access the session name
+req.session.name = 'Esten';
+```
+
 
 #### ```PING``` 
 The ```PING``` middleware is used for opening/closing TCP socket connections to specified hosts in Node.
+- Install: ```npm i ping```
 
 **Example**
 
