@@ -22,7 +22,7 @@ __1.)__ Create a ```package.json``` file by running: ```npm init```
 
 __2.)__ Install Express and Dependencies: ```npm i express```
 
-  __2a.)__ Install Dependencies, if applicable: ```npm i body-parser cors dotenv helmet knex morgan pg```
+   __2a.)__ Install Dependencies, if applicable: ```npm i body-parser cors dotenv helmet knex morgan pg```
 
 __3.)__ Create an index.js file for the app: ```touch index.js```
 
