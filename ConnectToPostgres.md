@@ -11,11 +11,17 @@
 # Setup Postgres & Express Connection
 **Steps**
 __1.)__ Install packages: ```npm i pg knex```
+
 __2.)__ Setup Postgres database
+
 __3.)__ Create db query functions in express
+
 __4.)__ Use "knex" to set up db connection values (ie. client, host, username, password, database etc.)
+
 __5.)__ Whitelist client IP (ie where the requests are coming from) this is typically with ```cors``` package.
+
 __6.)__ Setup Express API routes
+
 __7.)__ Test in Postman
 
 ## Setup Postgres Database
