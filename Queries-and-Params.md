@@ -1,10 +1,20 @@
 # Queries and Params
 Working w/ queries and params of the request object in Express/Node.
 
+
+## Quick Access
+- [Request object](#request-request-object)
+  - [Content-Types](#content-types-on-the-request-object)
+- [Query strings](#query-strings)
+- [Response object](#response-headers--content-types)
+
+
+--------
+
 # ```REQUEST``` Object
 The ```request``` object that's accessible within an express HTTP method function (ie ```app.get()```, ```app.put()``` etc).
 
-### Properties Available on the ```REQUEST``` Object
+### Request (```REQUEST```) Object 
 All properties are available on the request object: ```req.baseURL```, ```req.cookies``` etc.
 
 - ```baseURL``` - the base url of the http request
@@ -60,3 +70,9 @@ There a set of content types that a request can send data as.
 - ```Content-Type: application/json``` requires the ```express.json()``` middleware
 - ```Content-Type: application/www-form-urlencoded``` requires the ```express.urlencoded()``` middleware
   - This type is often used with forms
+
+
+## Response Headers & Content Types
+When a server responds to a client, the ```Content-Type``` is determined by what data type is passed to the response. The ```send()``` automatically sets the ```Content-Length``` header.
+- String: ```text/html``` 
+- Object|Array: ```application/json```
