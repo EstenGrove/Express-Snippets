@@ -85,8 +85,31 @@ const pool = new Pool({
 ```
 
 
-#### ```PING``` and ```NET-PING```
-Both packages are great for handling ping requests to a host. However, ```net-ping``` will immediately close the request connection after an attempt if so desired which allows for less time required between additional requests and retries.
+#### ```PING``` 
+The ```PING``` middleware is used for opening/closing TCP socket connections to specified hosts in Node.
+
+**Example**
+
+```javascript
+const ping = require('ping');
+
+// DO NOT include "https://"
+const hosts ['192.168.8.1', 'echo-alchemist.com', 'sgore.dev'];
+
+hosts.forEach((host, index) => {
+  ping.sys.probe(host, (isAlive) => {
+    const msg = isAlive ? 'Host: ' + host + ' is alive' : 'Host: ' + host + ' is down';
+    console.log(msg);
+  });
+});
+
+// Promise Version
+hosts.forEach((host, index) => {
+  ping.sys.probe(host)
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+})
+```
 
 
 
