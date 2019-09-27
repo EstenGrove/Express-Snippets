@@ -46,6 +46,7 @@ __7.)__ Then start the server: ```npm start```
 
 
 ## Tools and Middleware
+*Nearly* all middleware is implemented by telling Express to "*use*" it: ```app.use(middleWare)```
 
 #### ```body-parser```
 "body-parser" is a package for handling HTTP requests and parsing the JSON body.
@@ -65,6 +66,29 @@ app.use(
 }))
 ```
 
+#### ```cookie-parser```
+"cookie-parser" is a package that handles parsing cookie headers and will populate the ```req.cookies``` property of the request object.
+
+**Example**
+```javascript
+// imports the middleware
+const cookieParser = require('cookie-parser');
+
+// tells express to use it
+app.use(cookieParser())
+```
+- Working w/ signed and unsigned cookies
+```javascript
+// to access cookies 
+
+app.get('/', function (req, res) {
+  console.log('Cookies: ', req.cookies);  // Cookies that have not been signed
+
+  console.log('Signed Cookies: ', req.signedCookies)   // Cookies that have been signed
+})
+```
+
+
 #### ```pg```
 "pg" is a package for working with Postgres in Express that includes: connection pooling, async notifications, bulk import/export etc.
 - Install: ```npm i pg```
@@ -82,6 +106,20 @@ const pool = new Pool({
   password: 'database password here',
   port: 5432
 })
+```
+
+#### ```morgan```
+"morgan" is an HTTP request logging package.
+
+**Example**
+```javascript
+//import package
+const morgan = require('morgan');
+
+app.use(morgan('combined'));
+
+// syntax
+morgan(format, options)
 ```
 
 
