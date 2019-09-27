@@ -5,6 +5,12 @@ A set of Node and Express snippets, helpers, tools and middleware.
 ## Quick Access
 - [Create Express App](#create-an-express-app)
 - [Middleware](#tools-and-middleware)
+- A list of common middle ware can be found [here](https://expressjs.com/en/resources/middleware.html)
+  - [body-parser](#body-parser)
+  - [cookie-parser](#cookie-parser)
+  - [pg: Postgres connection](#pg)
+  - [morgan: http logger](#morgan)
+  - [ping: a ping TCP wrapper](#ping)
 ------------------------
 
 
