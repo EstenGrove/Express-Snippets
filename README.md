@@ -9,9 +9,13 @@ A set of Node and Express snippets, helpers, tools and middleware.
   - [body-parser](#body-parser)
   - [cookie-parser](#cookie-parser)
   - [pg: Postgres connection](#pg)
+  - [knex](#knex-middleware)
+  - [dotenv](#dotenv-middleware)
   - [morgan: http logger](#morgan)
   - [express-sessions: user sessions](#express-sessions)
   - [ping: a ping TCP wrapper](#ping)
+  
+  
 ------------------------
 
 
@@ -94,11 +98,18 @@ app.use(cookieParser())
 ```javascript
 // to access cookies 
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   console.log('Cookies: ', req.cookies);  // Cookies that have not been signed
 
   console.log('Signed Cookies: ', req.signedCookies)   // Cookies that have been signed
 })
+```
+
+#### ```dotenv```
+"dotenv" is a package for easily integrating environment variables.
+
+```sql
+require("dotenv").config();
 ```
 
 
@@ -120,6 +131,70 @@ const pool = new Pool({
   port: 5432
 })
 ```
+
+#### ```knex```
+"knex" is a SQL query builder, mainly used for Node.js applications with built in model schema creation, table migrations, connection pooling and seeding.
+
+- **NOTE: ```knex``` really works great with ```pg``` to make sure to have that installed already.**
+- We can start by creating a ```knexfile.js``` in the root of your project which will act as our configuration for different environments, (e.g. – local development vs production).
+- [Here's a useful gist for setup](https://gist.github.com/NigelEarle/80150ff1c50031e59b872baf0e474977)
+
+```sql
+// NOTE: you can also pass env variables to the db connection
+
+// create a db connection w/ localhost ONLY
+const db = require("knex")({
+  client: "pg",
+  connection: {
+    host: "127.0.0.1",
+    user: "",
+    password: "",
+    database: "dashboard"
+  }
+});
+
+// setup a config file for db connection that includes environment settings for staging, development, production etc.
+module.exports = {
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './dev.sqlite3'
+    }
+  },
+  staging: {
+    client: 'postgresql',
+    connection: {
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  },
+  production: {
+    client: 'postgresql',
+    connection: {
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  }
+};
+
+```
+
 
 #### ```morgan```
 "morgan" is an HTTP request logging package.
