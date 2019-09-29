@@ -16,7 +16,7 @@
 ------------
 
 
-# Alternate Method of Connecting to Postgres
+# Main Method of Connecting to Postgres
 The simpler way is simply using ```pg``` and ```cors``` with a simple connection Pool to keep the connection active.
 
 __1.)__ Install packages: ```npm i pg cors```
@@ -146,7 +146,7 @@ app.delete('/api/items/:id', (req, res, db) => deleteItem(req, res, db));
 
 ------------
 
-# Steps: Setup Postgres & Express Connection
+## Alternate Setup Method: Postgres & Express Connection
 **Steps**
 
 __1.)__ Install packages: ```npm i pg knex```
