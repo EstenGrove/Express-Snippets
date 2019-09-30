@@ -1,7 +1,6 @@
 # Working with Postgres
 
 ## Quick Access
-- [Setup Postgres Database](#setup-postgres-database)
 - [Setup Express packages](#setup-express-packages)
 - [DB Queries in Express](#queries)
   - ["GET"](#get-request-select--query)
@@ -16,6 +15,25 @@
 
 ------------
 
+## Setup Express Packages
+
+```bash
+npm i pg cors body-parser
+```
+#### Init Packages in Express
+```javascript
+const express = require('express');
+
+// require the env variables, only useful if using env vars
+require('dotenv').config();
+
+
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const morgan = require("morgan"); // not required, used for logging
+```
+
+------------
 
 # Main Method of Connecting to Postgres
 The simpler way is simply using ```pg``` and ```cors``` with a simple connection Pool to keep the connection active.
