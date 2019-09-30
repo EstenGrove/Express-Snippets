@@ -15,25 +15,6 @@
 
 ------------
 
-## Setup Express Packages
-
-```bash
-npm i pg cors body-parser
-```
-#### Init Packages in Express
-```javascript
-const express = require('express');
-
-// require the env variables, only useful if using env vars
-require('dotenv').config();
-
-
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const morgan = require("morgan"); // not required, used for logging
-```
-
-------------
 
 # Main Method of Connecting to Postgres
 The simpler way is simply using ```pg``` and ```cors``` with a simple connection Pool to keep the connection active.
@@ -80,6 +61,26 @@ app.put('/api/items/:id', (req, res, db) => updateItem(req, res, db));
 
 // for deleteItem()
 app.delete('/api/items/:id', (req, res, db) => deleteItem(req, res, db));
+```
+
+------------
+
+## Setup Express Packages
+
+```bash
+npm i pg cors body-parser
+```
+#### Init Packages in Express
+```javascript
+const express = require('express');
+
+// require the env variables, only useful if using env vars
+require('dotenv').config();
+
+
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const morgan = require("morgan"); // not required, used for logging
 ```
 
 ----------
