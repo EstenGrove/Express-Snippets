@@ -3,7 +3,7 @@
 ## Quick Access
 - [Setup Postgres Database](#setup-postgres-database)
 - [Setup Express packages](#setup-express-packages)
-- [Add DB Queries in Express](#add-db-queries)
+- [Queries in Express](#queries)
   - ["GET"](#get-request-query)
   - ["POST"](#post-request)
   - ["PUT"](#put-request)
@@ -84,6 +84,10 @@ const pool = new Pool({
 
 // NOTE: you can also add a "port" property to the "Pool"
 ```
+
+--------
+
+# Queries
 
 #### "GET" Request: SELECT * Query
 
