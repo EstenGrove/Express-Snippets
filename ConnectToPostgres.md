@@ -42,12 +42,13 @@ __1.)__ Install packages: ```npm i pg cors```
 
 __2.)__ Setup Postgres database
 
-__3.)__ Create the db connection:
+__3.)__ [Create the db connection](#create-pool-connection)
 
-__3a.)__ Create a ```controllers/``` directory and inside create a ```main.js``` file for the queries & connection:
+__3a.)__ [Create A "controllers" Directory for Queries](#create-directory-for-queries)
 
+__4.)__ [Create DB queries](#queries)
 
-__5.)__ Export the query functions: 
+__5.)__ Then export the query functions: 
 ```javascript
 module.exports = {
   getAllItems,
@@ -80,6 +81,8 @@ app.put('/api/items/:id', (req, res, db) => updateItem(req, res, db));
 // for deleteItem()
 app.delete('/api/items/:id', (req, res, db) => deleteItem(req, res, db));
 ```
+
+----------
 
 #### Create Directory for Queries
 
