@@ -19,6 +19,8 @@
 # Main Method of Connecting to Postgres
 The simpler way is simply using ```pg``` and ```cors``` with a simple connection Pool to keep the connection active.
 
+**NOTE: Here's an [excellent tutorial](https://blog.logrocket.com/nodejs-expressjs-postgresql-crud-rest-api-example/)**
+
 __1.)__ Install packages: ```npm i pg cors```
 
 __2.)__ Setup Postgres database
